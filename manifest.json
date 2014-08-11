@@ -1,0 +1,21 @@
+{
+  "name": "Google Maps magnetic declination extension",
+  "description": "A Chrome extension that adds on a UI element to Google Maps to show the location's magnetic declination",
+  "author": "Polly Powledge",
+  "manifest_version":2,
+  "version": "0.1",
+  "content_scripts": [
+  {
+  	"matches": [ "http://maps.google.com/*", "https://maps.google.com/*", "http://www.google.com/maps/*", "https://www.google.com/maps/*"],
+	"css": ["mn.css"],
+  	"js": ["contentscript.js"],
+	"run_at": "document_end"
+  }
+  ],
+   "background": {
+    "scripts": ["background.js"]
+  },
+"permissions": [
+    "tabs"
+]
+}
